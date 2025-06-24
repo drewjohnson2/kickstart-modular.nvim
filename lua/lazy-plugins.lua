@@ -24,25 +24,29 @@ require('lazy').setup({
   -- include a plugin definition from file lua/path/name.lua
 
   require 'kickstart.plugins.gitsigns',
-
-  require 'kickstart.plugins.which-key',
-
+  --require 'kickstart.plugins.which-key',
   require 'kickstart.plugins.telescope',
-
   require 'kickstart.plugins.lspconfig',
-
   require 'kickstart.plugins.conform',
-
-  require 'kickstart.plugins.blink-cmp',
-
-  require 'kickstart.plugins.tokyonight',
-
+  --require 'kickstart.plugins.blink-cmp',
+  --require 'kickstart.plugins.tokyonight',
   require 'kickstart.plugins.todo-comments',
-
   require 'kickstart.plugins.mini',
-
   require 'kickstart.plugins.treesitter',
-
+  require 'kickstart.plugins.snacks',
+  require 'kickstart.plugins.easy-dotnet',
+  require 'kickstart.plugins.roslyn',
+  require 'kickstart.plugins.nvim-cmp',
+  require 'kickstart.plugins.todo-comments',
+  require 'kickstart.plugins.undotree',
+  require 'kickstart.plugins.colorbuddy',
+  require 'kickstart.plugins.comment',
+  require 'kickstart.plugins.xcodebuild',
+  require 'kickstart.plugins.nvim-dap',
+  require 'kickstart.plugins.nvim-dap-ui',
+  require 'kickstart.plugins.lualine',
+  require 'kickstart.plugins.nightfox',
+  --  require 'kickstart.plugins.iceberg',
   -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
   -- place them in the correct locations.
@@ -72,21 +76,7 @@ require('lazy').setup({
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
     -- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
-    icons = vim.g.have_nerd_font and {} or {
-      cmd = '⌘',
-      config = '🛠',
-      event = '📅',
-      ft = '📂',
-      init = '⚙',
-      keys = '🗝',
-      plugin = '🔌',
-      runtime = '💻',
-      require = '🌙',
-      source = '📄',
-      start = '🚀',
-      task = '📌',
-      lazy = '💤 ',
-    },
+    icons = {}
   },
 })
 
