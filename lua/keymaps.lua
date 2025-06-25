@@ -82,7 +82,7 @@ vim.keymap.set('v', '<leader>y', '"+y', { desc = 'Copy To System Clipboard' })
 vim.keymap.set('n', '<leader>Y', '"+Y', { desc = 'Copy To System Clipboard' })
 
 -- open vimrc
-vim.keymap.set('n', '<leader>rc', '<cmd>edit $MYVIMRC<CR>', { desc = 'Edit vimrc' })
+--vim.keymap.set('n', '<leader>rc', '<cmd>edit $MYVIMRC<CR>', { desc = 'Edit vimrc' })
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
@@ -115,5 +115,7 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+vim.keymap.set('n', '<C-d><C-v>', '<cmd>DiffviewOpen<CR>', { desc = 'Open Diffview'  })
+vim.keymap.set('n', '<C-d><C-d>', '<cmd>DiffviewClose<CR>', { desc = 'Open Diffview'  })
 
 -- vim: ts=2 sts=2 sw=2 et

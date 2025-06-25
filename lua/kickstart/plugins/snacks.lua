@@ -47,6 +47,7 @@ return {
     { '<leader>gb', function() Snacks.picker.git_branches() end, desc = 'Git Branches' },
     { '<leader>/', function() Snacks.picker.lines() end, desc = 'Search in Buffer' },
     { '<leader>s/', function() Snacks.picker.grep_buffers() end, desc = 'Search in Buffer' },
+    { '<leader>sc', function() Snacks.picker.files({ cwd = vim.fn.stdpath("config")}) end, desc = 'Search Configs' },
     {
       '<leader>se',
       function()
@@ -59,7 +60,48 @@ return {
   ---@type snacks.Config
   opts = {
     notifier = { enabled = true },
-    dashboard = {},
+    dashboard = {
+	sections = {
+	    {
+		header =
+[[                       .,,uod8B8bou,,.
+              ..,uod8BBBBBBBBBBBBBBBBRPFT?l!i:.
+         ,=m8BBBBBBBBBBBBBBBRPFT?!||||||||||||||
+         !...:!TVBBBRPFT||||||||||!!^^""'   ||||
+         !.......:!?|||||!!^^""'            ||||
+         !.........||||                     ||||
+         !.........||||  ##                 ||||
+         !.........||||                     ||||
+         !.........||||                     ||||
+         !.........||||                     ||||
+         !.........||||                     ||||
+         `.........||||                    ,||||
+          .;.......||||               _.-!!|||||
+   .,uodWBBBBb.....||||       _.-!!|||||||||!:'
+!YBBBBBBBBBBBBBBb..!|||:..-!!|||||||!iof68BBBBBb....
+!..YBBBBBBBBBBBBBBb!!||||||||!iof68BBBBBBRPFT?!::   `.
+!....YBBBBBBBBBBBBBBbaaitf68BBBBBBRPFT?!:::::::::     `.
+!......YBBBBBBBBBBBBBBBBBBBRPFT?!::::::;:!^"`;:::       `.
+!........YBBBBBBBBBBRPFT?!::::::::::^''...::::::;         iBBbo.
+`..........YBRPFT?!::::::::::::::::::::::::;iof68bo.      WBBBBbo.
+  `..........:::::::::::::::::::::::;iof688888888888b.     `YBBBP^'
+    `........::::::::::::::::;iof688888888888888888888b.     `
+      `......:::::::::;iof688888888888888888888888888888b.
+        `....:::;iof688888888888888888888888888888888899fT!
+          `..::!8888888888888888888888888888888899fT|!^"'
+            `' !!988888888888888888888888899fT|!^"'
+                `!!8888888888888888899fT|!^"'
+                  `!988888888899fT|!^"'
+                    `!9899fT|!^"'
+                      `!^"']]
+	    },
+	    {
+		pane = 2,
+		{ section = "keys", gap = 1, padding = 1 },
+		{ section = "startup" },
+	    },
+	},
+    },
     git = { enabled = true },
     terminal = {},
     picker = {
