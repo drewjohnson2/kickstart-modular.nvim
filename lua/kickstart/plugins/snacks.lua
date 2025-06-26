@@ -12,7 +12,7 @@ return {
       desc = 'Dismiss Notification',
     },
     {
-      '<leader>bl',
+      '<leader>gbl',
       function()
         ---@param opts? snacks.terminal.Opts | { count?: number }
         Snacks.git.blame_line(opts)
@@ -30,7 +30,7 @@ return {
     },
     { '<leader>gs', function() Snacks.picker.git_status() end, desc = 'Git Status' },
     { '<leader>gl', function() Snacks.picker.git_log() end, desc = 'Git Log' },
-    { '<leader>gg', function() Snacks.picker.git_diff() end, desc = 'Git Diff' },
+    { '<leader>gdf', function() Snacks.picker.git_diff() end, desc = 'Git Diff' },
     { '<leader>lf', function() Snacks.picker.git_log_file() end, desc = 'Git Log File' },
     { '<leader>sf', function() Snacks.picker.files() end, desc = 'Find Files' },
     { '<leader>sg', function() Snacks.picker.grep() end, desc = 'Grep' },

@@ -55,10 +55,10 @@ vim.keymap.set('n', '<leader>vs', '<cmd>vs<CR>')
 vim.keymap.set('n', '<leader>hs', '<cmd>sp<CR>')
 vim.keymap.set('n', '<leader>ut', vim.cmd.UndotreeToggle)
 vim.keymap.set('n', '<C-n>', '<cmd>set invrelativenumber<CR>', { noremap = true, silent = true })
-vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
-vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 
 -- the next two keybinds allows movement of highlighted text
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 
 -- put next line on same line as your cursor
 -- but keep cursor in place (i think)
@@ -115,7 +115,7 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
-vim.keymap.set('n', '<C-d><C-v>', '<cmd>DiffviewOpen<CR>', { desc = 'Open Diffview'  })
-vim.keymap.set('n', '<C-d><C-d>', '<cmd>DiffviewClose<CR>', { desc = 'Open Diffview'  })
+vim.keymap.set('n', '<a-d>', '<cmd>DiffviewOpen -uno<CR>', { desc = 'Open Diffview'  })
+vim.keymap.set('n', '<a-c>', '<cmd>DiffviewClose<CR>', { desc = 'Close Diffview'  })
 
 -- vim: ts=2 sts=2 sw=2 et
