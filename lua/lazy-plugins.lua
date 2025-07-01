@@ -34,21 +34,22 @@ require('lazy').setup({
   require 'kickstart.plugins.mini',
   require 'kickstart.plugins.treesitter',
   require 'kickstart.plugins.snacks',
-  require 'kickstart.plugins.easy-dotnet',
-  require 'kickstart.plugins.roslyn',
+  --require 'kickstart.plugins.easy-dotnet',
+  --require 'kickstart.plugins.roslyn',
   require 'kickstart.plugins.nvim-cmp',
   require 'kickstart.plugins.todo-comments',
   require 'kickstart.plugins.undotree',
   require 'kickstart.plugins.colorbuddy',
   require 'kickstart.plugins.comment',
-  require 'kickstart.plugins.xcodebuild',
-  require 'kickstart.plugins.nvim-dap',
-  require 'kickstart.plugins.nvim-dap-ui',
+  --require 'kickstart.plugins.xcodebuild',
+  --require 'kickstart.plugins.nvim-dap',
+  --require 'kickstart.plugins.nvim-dap-ui',
   require 'kickstart.plugins.lualine',
   require 'kickstart.plugins.nightfox',
   require 'kickstart.plugins.treesitter-textobjects',
   require 'kickstart.plugins.indent_line',
   require 'kickstart.plugins.diffview',
+  require 'kickstart.plugins.tabby',
 
   --  require 'kickstart.plugins.iceberg',
   -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
@@ -64,7 +65,7 @@ require('lazy').setup({
   -- require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
   -- require 'kickstart.plugins.autopairs',
-  require 'kickstart.plugins.neo-tree',
+  --require 'kickstart.plugins.neo-tree',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.

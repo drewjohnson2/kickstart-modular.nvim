@@ -16,20 +16,20 @@ return { -- LSP Configuration & Plugins
     { 'folke/neodev.nvim', opts = {} },
   },
   config = function()
-    local lspconfig = require 'lspconfig'
-
-    lspconfig.sourcekit.setup {
-      capabilities = {
-        workspace = {
-          didChangeWatchedFiles = {
-            dynamicRegistration = true,
-          },
-        },
-      },
-      on_init = function(client)
-        client.offset_encoding = 'utf-8'
-      end,
-    }
+    -- local lspconfig = require 'lspconfig'
+    --
+    -- lspconfig.sourcekit.setup {
+    --   capabilities = {
+    --     workspace = {
+    --       didChangeWatchedFiles = {
+    --         dynamicRegistration = true,
+    --       },
+    --     },
+    --   },
+    --   on_init = function(client)
+    --     client.offset_encoding = 'utf-8'
+    --   end,
+    -- }
 
     -- Brief aside: **What is LSP?**
     --
@@ -72,17 +72,17 @@ return { -- LSP Configuration & Plugins
           vim.keymap.set('n', keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
         end
 
-        if vim.bo[0].filetype == 'cs' then
-          --map('<leader>dd', require('csharp').debug_project, '[D]ebug Project')
-          map('<leader>rr', require('easy-dotnet').run, '[R]un Project')
-          map('<leader>tr', require('easy-dotnet').testrunner, 'Open [T]est [R]unner')
-          map('<leader>bs', require('easy-dotnet').build_solution, 'Open [T]est [R]unner')
-        elseif vim.bo[0].filetype == 'swift' then
-          local xcodebuild = require 'xcodebuild.integrations.dap'
-
-          map('<leader>rr', '<cmd>XcodebuildBuildRun<cr>', 'Build & Run Project')
-          map('<leader>dd', xcodebuild.build_and_debug, 'Build & Debug')
-        end
+        -- if vim.bo[0].filetype == 'cs' then
+        --   --map('<leader>dd', require('csharp').debug_project, '[D]ebug Project')
+        --   map('<leader>rr', require('easy-dotnet').run, '[R]un Project')
+        --   map('<leader>tr', require('easy-dotnet').testrunner, 'Open [T]est [R]unner')
+        --   map('<leader>bs', require('easy-dotnet').build_solution, 'Open [T]est [R]unner')
+        -- elseif vim.bo[0].filetype == 'swift' then
+        --   local xcodebuild = require 'xcodebuild.integrations.dap'
+        --
+        --   map('<leader>rr', '<cmd>XcodebuildBuildRun<cr>', 'Build & Run Project')
+        --   map('<leader>dd', xcodebuild.build_and_debug, 'Build & Debug')
+        -- end
 
         local client = vim.lsp.get_client_by_id(event.data.client_id)
 
@@ -212,7 +212,7 @@ return { -- LSP Configuration & Plugins
       clangd = {
         init_options = { compilationDatabasePath = '.' },
       },
-      roslyn = {},
+      --roslyn = {},
       -- gopls = {},
       -- pyright = {},
       -- rust_analyzer = {},

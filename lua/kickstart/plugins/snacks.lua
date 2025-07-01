@@ -1,5 +1,4 @@
-return {
-  'folke/snacks.nvim',
+return { 'folke/snacks.nvim',
   priority = 1000,
   lazy = false,
   keys = {
@@ -106,6 +105,11 @@ return {
     terminal = {},
     picker = {
       sources = {
+	files = {
+	    layout = {
+		layout = { backdrop = false }
+	    }
+	},
         grep = {
           layout = {
             layout = { position = 'bottom', height = 30 },
