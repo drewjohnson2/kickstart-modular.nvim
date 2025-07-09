@@ -17,7 +17,7 @@ return {
       vim.fn.jobstart(string.format('dotnet build %s', path), {
         on_exit = function(_, return_code)
           if return_code == 0 then
-            spinner:stop_spinner 'Built successfully'
+            spinner:stop_spinner('Built successfully ' .. path)
           else
             spinner:stop_spinner('Build failed with exit code ' .. return_code, vim.log.levels.ERROR)
             error 'Build failed'
@@ -67,7 +67,7 @@ return {
           request = 'launch',
           env = function()
             local dll = ensure_dll()
-            local vars = dotnet.get_environment_variables(dll.project_name, dll.absolute_project_path)
+            local vars = dotnet.get_environment_variables(dll.project_name, dll.absolute_project_path, false)
             return vars or nil
           end,
           program = function()

@@ -66,6 +66,8 @@ vim.opt.scrolloff = 10
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+vim.opt.showtabline = 2
+
 -- custom keybinds
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`

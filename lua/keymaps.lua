@@ -118,4 +118,12 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 vim.keymap.set('n', '<a-d>', '<cmd>DiffviewOpen -uno<CR>', { desc = 'Open Diffview'  })
 vim.keymap.set('n', '<a-c>', '<cmd>DiffviewClose<CR>', { desc = 'Close Diffview'  })
 
+-- All about tabs
+vim.keymap.set('n', '<leader>tn', '<cmd>tabnew<CR>', { desc = 'Create a new tab' })
+vim.keymap.set('n', '<leader>tc', '<cmd>tabclose<CR>', { desc = 'Close a tab' })
+-- move current tab to previous position
+vim.api.nvim_set_keymap("n", "<leader>tmp", ":-tabmove<CR>", { noremap = true })
+-- move current tab to next position
+vim.api.nvim_set_keymap("n", "<leader>tmn", ":+tabmove<CR>", { noremap = true })
+
 -- vim: ts=2 sts=2 sw=2 et

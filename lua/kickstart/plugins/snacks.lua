@@ -106,6 +106,11 @@ return {
     terminal = {},
     picker = {
       sources = {
+	files = {
+	    layout = {
+		layout = { backdrop = false }
+	    }
+	},
         grep = {
           layout = {
             layout = { position = 'bottom', height = 30 },
@@ -115,7 +120,10 @@ return {
           layout = { position = 'bottom', height = 30 },
         },
         lines = {
-          layout = { preset = 'vscode' },
+          layout = { 
+	    preset = 'vscode',
+	    border = 'rounded'
+	  },
         },
       },
     },

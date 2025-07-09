@@ -35,10 +35,14 @@ return {
 
     local groups = {
       terafox = {
-        NormalFloat = { bg = '#142123', fg = 'palette.blue.base' },
-        FloatTitle = { bg = '#142123', fg = 'palette.blue.base' },
-	FloatBorder = { bg = '#142123', fg = 'palette.green' },
+        NormalFloat = { bg = '#131f22', fg = 'palette.blue.base' },
+        FloatTitle = { bg = '#131f22', fg = 'palette.blue.base' },
+	FloatBorder = { bg = '#131f22', fg = 'palette.green' },
 	WinSeparator = { bg = 'palette.bg1', fg = 'palette.blue' },
+	CmpNormal = { bg = '#131f22', fg = 'palette.blue.base' },
+	BorderBg = { bg = '#131f22', fg = 'palette.green' },
+	TabLine = { bg = 'palette.bg0', fg = 'palette.white' },
+	--TabLineSel = { bg = 'palette.yellow.dim', fg = 'palette.bg0' }
       },
     }
 
