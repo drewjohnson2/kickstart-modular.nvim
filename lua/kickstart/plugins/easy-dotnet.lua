@@ -21,6 +21,8 @@ return {
   config = function()
     local dotnet = require 'easy-dotnet'
 
+	vim.keymap.set('n', '<leader>rr', '<cmd>Dotnet run<CR>', { desc  = 'Run dotnet without debugging' })
+
     dotnet.setup {
       --Optional function to return the path for the dotnet sdk (e.g C:/ProgramFiles/dotnet/sdk/8.0.0)
       -- easy-dotnet will resolve the path automatically if this argument is omitted, for a performance improvement you can add a function that returns a hardcoded string
@@ -99,14 +101,14 @@ return {
       auto_bootstrap_namespace = {
         --block_scoped, file_scoped
         type = 'block_scoped',
-        enabled = true,
+        enabled = false,
       },
       -- choose which picker to use with the plugin
       -- possible values are "telescope" | "fzf" | "snacks" | "basic"
       -- if no picker is specified, the plugin will determine
       -- the available one automatically with this priority:
       -- telescope -> fzf -> snacks ->  basic
-      picker = 'telescope',
+      picker = 'snacks',
       background_scanning = true,
     }
   end,
