@@ -106,7 +106,7 @@ return {
       -- if no picker is specified, the plugin will determine
       -- the available one automatically with this priority:
       -- telescope -> fzf -> snacks ->  basic
-      picker = 'telescope',
+      picker = 'snacks',
       background_scanning = true,
     }
   end,
